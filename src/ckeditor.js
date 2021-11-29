@@ -30,6 +30,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -58,7 +59,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	PageBreak
+	PageBreak,
+	Alignment
 ];
 
 // Editor configuration.
@@ -73,6 +75,7 @@ ClassicEditor.defaultConfig = {
 			'bulletedList',
 			'numberedList',
 			'|',
+			'alignment',
 			'indent',
 			'outdent',
 			'|',
@@ -81,9 +84,10 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'|',
+			'pageBreak',
+			'|',
 			'undo',
-			'redo',
-			'pageBreak'
+			'redo'
 		]
 	},
 	image: {
