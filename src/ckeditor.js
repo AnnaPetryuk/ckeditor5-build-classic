@@ -34,6 +34,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -66,7 +67,8 @@ ClassicEditor.builtinPlugins = [
 	Alignment,
 	ImageCaptionEditing,
 	ImageResize,
-	ImageEditing
+	ImageEditing,
+	Font
 ];
 
 // Editor configuration.
@@ -75,22 +77,27 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'fontfamily',
+			'fontsize',
+			'fontColor',
+			'fontBackgroundColor',
+			'|',
 			'bold',
 			'italic',
-			'link',
+			'|',
 			'bulletedList',
 			'numberedList',
+			'pageBreak',
 			'|',
 			'alignment',
 			'indent',
 			'outdent',
 			'|',
+			'link',
 			'imageUpload',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
-			'|',
-			'pageBreak',
 			'|',
 			'undo',
 			'redo'
@@ -101,6 +108,7 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:full',
 			'imageStyle:side',
 			'|',
+			'toggleImageCaption',
 			'imageTextAlternative'
 		]
 	},
@@ -112,5 +120,5 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'uk'
+	language: 'en'
 };
