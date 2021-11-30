@@ -20,6 +20,9 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import ImageCaptionEditing from '@ckeditor/ckeditor5-image/src/imagecaption/imagecaptionediting';
+import ImageEditing from '@ckeditor/ckeditor5-image/src/image/imageediting';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -60,7 +63,10 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	PageBreak,
-	Alignment
+	Alignment,
+	ImageCaptionEditing,
+	ImageResize,
+	ImageEditing
 ];
 
 // Editor configuration.
@@ -106,5 +112,5 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'uk'
 };
